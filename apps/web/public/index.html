@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>干到哪了 · Agent Progress Board</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <h1>干到哪了</h1>
+        <p class="sub">Agent Progress Board · 本地只读 · 127.0.0.1</p>
+      </div>
+      <div class="meta" id="meta"></div>
+    </header>
+    <p class="banner" id="banner" hidden></p>
+    <p class="empty" id="empty" hidden></p>
+    <main class="board" id="board">
+      <section data-status="pending">
+        <h2>待做 <span class="count" data-count>0</span></h2>
+        <div class="cards"></div>
+      </section>
+      <section data-status="in_progress">
+        <h2>进行中 <span class="count" data-count>0</span></h2>
+        <div class="cards"></div>
+      </section>
+      <section data-status="completed">
+        <h2>完成 <span class="count" data-count>0</span></h2>
+        <div class="cards"></div>
+      </section>
+      <section data-status="blocked">
+        <h2>阻塞 <span class="count" data-count>0</span></h2>
+        <div class="cards"></div>
+      </section>
+    </main>
+    <section class="sessions" id="sessions" hidden>
+      <h2>Codex 会话 <span class="hint">仅 cwd / 元数据，不是任务状态</span></h2>
+      <ul id="session-list"></ul>
+    </section>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "id": "4",
+  "subject": "Add fs-watch auto-refresh",
+  "description": "Watch Claude task files and Cursor plans; fall back to short polling.",
+  "activeForm": "Wiring file watchers",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": ["2"]
+}

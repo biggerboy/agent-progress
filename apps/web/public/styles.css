@@ -1,0 +1,40 @@
+:root {
+  --bg: #121418;
+  --panel: #1c2028;
+  --card: #262b36;
+  --line: #3a4150;
+  --text: #e8eaed;
+  --muted: #9aa3b2;
+  --pending: #8ab4f8;
+  --doing: #fdd663;
+  --done: #81c995;
+  --blocked: #f28b82;
+  --claude: #d4a373;
+  --cursor: #7dd3fc;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 ui-sans-serif, system-ui, sans-serif; }
+.top { display: flex; justify-content: space-between; gap: 16px; padding: 20px 24px 8px; align-items: flex-end; flex-wrap: wrap; }
+h1 { margin: 0; font-size: 22px; letter-spacing: 0.02em; }
+.sub, .meta, .hint, .count { color: var(--muted); font-size: 13px; }
+.banner, .empty { margin: 8px 24px; padding: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 12px 24px 24px; align-items: start; }
+section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; min-height: 180px; }
+section h2 { margin: 0 0 10px; font-size: 14px; font-weight: 650; display: flex; justify-content: space-between; }
+.cards { display: flex; flex-direction: column; gap: 8px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px; cursor: pointer; text-align: left; width: 100%; color: inherit; }
+.card h3 { margin: 0 0 6px; font-size: 14px; font-weight: 600; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.badge { font-size: 11px; padding: 2px 6px; border-radius: 999px; border: 1px solid var(--line); }
+.badge.claude { color: var(--claude); }
+.badge.cursor { color: var(--cursor); }
+.evidence { display: none; margin-top: 8px; color: var(--muted); font-size: 12px; word-break: break-all; }
+.card.open .evidence { display: block; }
+.sessions { margin: 0 24px 24px; padding: 12px; background: var(--panel); border: 1px dashed var(--line); border-radius: 10px; }
+.sessions ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); }
+[data-status="pending"] h2 { color: var(--pending); }
+[data-status="in_progress"] h2 { color: var(--doing); }
+[data-status="completed"] h2 { color: var(--done); }
+[data-status="blocked"] h2 { color: var(--blocked); }
+@media (max-width: 1100px) { .board { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .board { grid-template-columns: 1fr; padding: 12px; } .top, .sessions { margin-left: 12px; margin-right: 12px; } .top { padding: 16px 12px 8px; } }
