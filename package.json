@@ -1,0 +1,21 @@
+{
+  "name": "agent-progress",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "干到哪了 / Agent Progress Board — local read-only cross-tool agent board",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/adapters/*"
+  ],
+  "scripts": {
+    "start": "node apps/web/src/server.js",
+    "start:fixtures": "node apps/web/src/server.js --fixtures",
+    "test": "node --test packages/normalize/*.test.js packages/adapters/*/*.test.js apps/web/src/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

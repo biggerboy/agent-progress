@@ -1,0 +1,10 @@
+{
+  "id": "5",
+  "subject": "Skip leftover blockers that are already completed",
+  "description": "blockedBy points at task 1, which is completed — this item must stay pending, not blocked.",
+  "activeForm": "Checking completed blockers",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": ["1"],
+  "extraUnknown": "kept in rest during parse"
+}

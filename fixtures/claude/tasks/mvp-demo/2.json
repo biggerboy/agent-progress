@@ -1,0 +1,9 @@
+{
+  "id": "2",
+  "subject": "Serve a loopback-only one-page board",
+  "description": "Bind 127.0.0.1. Four columns. Expand a card to show the source path.",
+  "activeForm": "Serving the local board",
+  "status": "in_progress",
+  "blocks": ["4"],
+  "blockedBy": []
+}

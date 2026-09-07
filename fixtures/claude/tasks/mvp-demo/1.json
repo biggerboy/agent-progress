@@ -1,0 +1,9 @@
+{
+  "id": "1",
+  "subject": "Normalize Claude / Cursor / Codex into one board model",
+  "description": "Define Item { id, title, status, source } and map blockedBy.",
+  "activeForm": "Normalizing board items",
+  "status": "completed",
+  "blocks": ["5"],
+  "blockedBy": []
+}

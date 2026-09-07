@@ -1,0 +1,2 @@
+{"timestamp":"2026-09-07T07:50:00.000Z","type":"session_meta","payload":{"id":"abc123def","cwd":"/tmp/demo-repo","cli_version":"0.0.0","originator":"codex_cli","title":"fixture session"}}
+{"timestamp":"2026-09-07T07:50:01.000Z","type":"event_msg","payload":{"type":"user_message"}}
